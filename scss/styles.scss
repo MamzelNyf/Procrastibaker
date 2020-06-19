@@ -1,39 +1,43 @@
 :root {
-    --dark: #24130F;
-    --medium: #92614A;
-    --light: #f9f2eb ;
-    --accent: #f0be88;
-    --shadow: #b7a198;
+    --dark: #003931;
+    --medium: #004e44;
+    --light: #ffe5da ;
+    --accent: #ff8b51;
+    --shadow: #f35341;
+    --heading: 'Pattaya', sans-serif;
+    --mainText: 'Montserrat', sans-serif;
 }
 *{
     box-sizing: border-box;
     margin:0;
     padding:0;
 }
+//import fonts from Google
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Pattaya&display=swap');
 body{
     background-color:var(--light);
-    padding: 25px;
+    font-family: var(--mainText);
+    color: var(--dark);
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: var(--heading);
 }
 header{
     background:linear-gradient(45deg, var(--dark), var(--medium));  
-    min-height: 40vh;
     color: var(--accent);
 }
 
-nav{
-    background-color: var(--accent);
+nav a{
+    color: var(--light);
 }
 
-main{
-    min-height: 55vh;
-}
+
 
 footer{
-    min-height: 5vh;
     background: linear-gradient(45deg, var(--dark), var(--medium));
     background-size: 200% 200%;
-    animation: gradient 15s ease infinite;
-    color: var(--medium);
+    animation: gradient 10s ease infinite;
+    color: var(--light);
 
 }
 @keyframes gradient {
