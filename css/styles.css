@@ -1,0 +1,67 @@
+:root {
+  --dark: #24130F;
+  --medium: #92614A;
+  --light: #f9f2eb ;
+  --accent: #f0be88;
+  --shadow: #b7a198;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--light);
+  padding: 25px;
+}
+
+header {
+  background: linear-gradient(45deg, var(--dark), var(--medium));
+  min-height: 40vh;
+  color: var(--accent);
+}
+
+nav {
+  background-color: var(--accent);
+}
+
+main {
+  min-height: 55vh;
+}
+
+footer {
+  min-height: 5vh;
+  background: linear-gradient(45deg, var(--dark), var(--medium));
+  background-size: 200% 200%;
+  -webkit-animation: gradient 15s ease infinite;
+          animation: gradient 15s ease infinite;
+  color: var(--medium);
+}
+
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
