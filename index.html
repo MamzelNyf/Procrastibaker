@@ -8,15 +8,18 @@
         <meta name="description" content="Procrastibaker | Baking & Coding">
         <meta name="author" content ="Fanny Lefert">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" /> 
         <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/svg-anim.css">
+
     </head>
     <body>
         <header class="container">
-            <div class="shapes float">
+            <!-- <div class="shapes float">
                 <svg class="triangle spin" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30px" height="30px" viewBox="0 0 30 30" enable-background="new 0 0 30 30" xml:space="preserve" style="transform: matrix3d(0.17364, 0.98481, 0, 0, -0.98481, 0.17364, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);">
                     <polygon fill="none" stroke-width="2px" stroke="#004e44" stroke-linejoin="round" stroke-miterlimit="10" points="14.921,2.27 28.667,25.5 1.175,25.5 "></polygon>
                 </svg>
-            </div>
+            </div> -->
 
             <!-- Header content -->
             <div class="logo">
@@ -28,6 +31,7 @@
             </button>
             <nav class="nav">
                 <ul class="nav__list">
+                    <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
                     <li class="nav__item"><a href="recipe.html" class="nav__link">Recipe</a></li>
                     <li class="nav__item"><a href="contact.html" class="nav__link">Contact</a></li>
                 </ul>
@@ -37,44 +41,67 @@
             <img src="https://dummyimage.com/500x500/fff/aaa&text=Overlapping" alt="">
         </header>
 
-        <!-- Main content -->
+        <!-- Main -->
         <main>
             <!-- Introduction -->
             <section class="intro container">
                 <h2 class="section__title">Hi, I'm Fanny</h2>
-
                 <p> Positive, hard-working and an insatiable learner, I like to define myself as a Web Designer.
                     But I'm not only a job title.<br>
                     I'm a Foodie and I'm lucky enough to have a Chef at home who is cooking amazing dishes.<br>
                     I love Nature, hiking in beautiful and preserved places provides me with such a positive feeling and powerful energy. Caring for our Environment is part of my everyday routine.<br>
                     I love Colours, Layout, Photography, Painting, Digital manipulation... I think we all have gifts to make Life prettier.<br>
-                    I'm a Cat lover and I can't wait to have a permanent situation to be able to take care of one (or many). For now, I'm just melting each time I watch videos and photos of cats. <br>
-                    
-                    I have started She{Codes} Plus program in June 2020, to develop my knowledge in web development, meet passionate women with similar interests and build a tech network in Perth.<br>
+                    I'm a Cat lover and I can't wait to have a permanent situation to be able to take care of one (or many). For now, I'm just melting each time I watch videos and photos of cats. 
+                </p>
+                <p>I have started She{Codes} Plus program in June 2020, to develop my knowledge in web development, meet passionate women with similar interests and build a tech network in Perth.<br>
                     But most of it, it is another step in my new life in Australia and I'm excited to find a community I belong to.<br>
-                    
                     I realised a few months ago that I was missing an important thing from France (besides my family): a Crunchy French style Baguette. I have started reading blogs, watching videos, following tutorials... Baking is actually like learning a new programming language! Step-by-step, by practising, it becomes easier and better.<br>
-                    
                     Let me share with you an enjoyable way to escape from the computer and satisfy a craving for crunch: Procratisbaking!<br>
-                    </p>
-                    <img src="https://dummyimage.com/500x500/fff/aaa&text=Profile" alt="">
+                </p>
+                <img src="https://dummyimage.com/500x500/fff/aaa&text=Profile" alt="">
 
             </section>
-            <!-- Gallery-->
-            <section class="gallery container">
-                <h3 class="section__title">While I'm not Baking, I'm Coding</h3>
+            <!-- Projects Gallery-->
+            <section class="projects__gallery container" id="projects">
+                <h2 class="section__title">While I'm not Baking, I'm Coding</h2>
                 <p>Text</p>
-                <img src="https://dummyimage.com/200x200/fff/aaa&text=Project1" alt="">
-                <img src="https://dummyimage.com/200x200/fff/aaa&text=Project2" alt="">
-                <img src="https://dummyimage.com/200x200/fff/aaa&text=Project3" alt="">
-                <img src="https://dummyimage.com/200x200/fff/aaa&text=Project4" alt="">
-
+                <div class="projects">
+                    <div class="project">
+                        <a href="#" class="project__item">
+                            <img src="https://dummyimage.com/200x200/fff/aaa&text=Project1" alt="" class="project__img">
+                        </a>
+                        <p>Text</p>
+                    </div>
+                    <div class="project">
+                        <a href="#" class="project__item">
+                            <img src="https://dummyimage.com/200x200/fff/aaa&text=Project2" alt="" class="project__img">
+                        </a>
+                        <p>Text</p>
+                    </div>
+                    <div class="project">
+                        <a href="#" class="project__item">
+                            <img src="https://dummyimage.com/200x200/fff/aaa&text=Project3" alt="" class="project__img">
+                        </a>
+                        <p>Text</p>
+                    </div>
+                    <div class="project">
+                        <a href="#" class="project__item">
+                            <img src="https://dummyimage.com/200x200/fff/aaa&text=Project4" alt="" class="project__img">
+                        </a>
+                        <p>Text</p>
+                    </div>
+                </div>
             </section>
         </main>
 
-        <!-- Footer content -->
+        <!-- Footer -->
         <footer class="container">
-            <p> Created by Fanny</p>
+            <p> Created by Fanny | </p><a href="mailto:fanny@shedesign.dev" class="footer__link">Say Hello</a>
+            <ul class="social-list">
+                <li class="social-list__link"><a href="https://github.con" class="social-list__link">a</a></li>
+                <li class="social-list__link"><a href="https://twitter.com" class="social-list__link">b</a></li>
+                <li class="social-list__link"><a href="https://copeden.io" class="social-list__link">c</a></li>
+            </ul>
         </footer>
     </body>
 </html>

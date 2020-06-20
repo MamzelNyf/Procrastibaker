@@ -1,4 +1,10 @@
-//Variables
+/* Reset */
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+/* Custom Properties */
 :root {
     //main colours
     --dark: #1D3557;
@@ -6,28 +12,59 @@
     --light: #A8DADC;
     --white: #F4F1DE ;
     --accent: #e47819;
-    //text family
-    --heading: 'Pattaya', sans-serif;
-    --text: 'Montserrat', sans-serif;
+
+    --fw-reg: 300;
+    --fw-bold: 900;
+
+    --ff-heading: 'Pattaya', sans-serif;
+    --ff-body: 'Montserrat', sans-serif;
+
+    --fs-h1: 3rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem;
 }
-//Reset 
-*{
-    box-sizing: border-box;
-    margin:0;
-    padding:0;
-}
-//Fonts
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Pattaya&display=swap');
+
+/* General Styles */
+
 body{
     background-color:var(--white);
-    font-family: var(--text);
+    font-family: var(--ff-body);
     color: var(--dark);
+    font-size: var(--fs-body);
+    line-height: 1.6;
 }
-h1, h2, h3, h4, h5, h6{
-    font-family: var(--heading);
-    color: var(--accent);
+img{
+    display:block;
+    max-width:100%;
+}
 
+/* Typography */
+
+h1, 
+h2, 
+h3{
+    font-family: var(--ff-heading);
+    line-height: 1.1;
+    margin:0;
 }
+h1{ font-size: var(--fs-h1)}
+h2{ font-size: var(--fs-h2)}
+h3{ font-size: var(--fs-h3)}
+
+.section__title{
+    margin-bottom: .25em;
+}
+.section__subtitle{
+    margin:0;
+    font-size: var(--fs-h3);
+}
+
+/* Intro Section */
+
+
+
 .container{
     padding: 20px 10vw;
 }
@@ -65,5 +102,12 @@ footer{
         }
     }
 
+@media (min-width: 800px){
+    :root{    
+    //font-size
+        --fs-h1: 4rem;
 
+        --fs-body: 1.25rem;
+    }
+}
 
