@@ -1,44 +1,54 @@
+//Variables
 :root {
     //main colours
-    --dark: #012e28;
-    --medium: #004e44;
-    --light: #f9f2eb ;
-    --accent: #ff8b51;
-    --shadow: #f35341;
+    --dark: #1D3557;
+    --medium: #457B9D;
+    --light: #A8DADC;
+    --white: #F4F1DE ;
+    --accent: #e47819;
     //text family
     --heading: 'Pattaya', sans-serif;
-    --mainText: 'Montserrat', sans-serif;
+    --text: 'Montserrat', sans-serif;
 }
-//reset 
+//Reset 
 *{
     box-sizing: border-box;
     margin:0;
     padding:0;
 }
-//import fonts from Google
+//Fonts
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Pattaya&display=swap');
 body{
-    background-color:var(--light);
-    font-family: var(--mainText);
+    background-color:var(--white);
+    font-family: var(--text);
     color: var(--dark);
 }
 h1, h2, h3, h4, h5, h6{
     font-family: var(--heading);
-}
-header{
-    background:linear-gradient(45deg, var(--dark), var(--medium));  
-    animation: gradient 10s ease infinite;
     color: var(--accent);
 
 }
-
-nav a{
+.container{
+    padding: 20px 10vw;
+}
+header{
+    background: var(--dark);
     color: var(--light);
 }
-
+.nav{
+    float:right;
+    li{
+        list-style-type: none;    
+        display: inline-block;
+        padding: 15px;
+}
+    a{
+        color: var(--light);
+    }
+}
 footer{
     background: linear-gradient(45deg, var(--dark), var(--medium));
-    // background-size: 200% 200%;
+    background-size: 200% 200%;
     animation: gradient 10s ease infinite;
     color: var(--light);
 
@@ -57,40 +67,3 @@ footer{
 
 
 
-.shapes {
-position: absolute; 
-width: 60px; 
-height: 60px; 
-top: 150px; 
-left: 1200px; 
-fill: var(--accent)
-}
-
-.float {
-animation-name: Floating;
-animation-duration: 6s;
-animation-iteration-count: infinite;
-animation-timing-function: ease-in-out;
-}
-
-@keyframes Floating{
-    from {transform:translate(0, 0px);}
-    65% {transform:translate(0, 50px);}
-    to {transform: translate(0, -0px);    }    
-}
-
-.spin {
-animation-name: Spinning;
-animation-duration: 12s;
-animation-iteration-count: infinite;
-animation-timing-function: ease-in-out;
-}
-
-@keyframes Spinning{
-0% {
-    transform: rotate(0deg);
-}
-100% {
-    transform: rotate(360deg);
-} 
-}

@@ -1,0 +1,37 @@
+.shapes {
+    position: absolute; 
+    width: 60px; 
+    height: 60px; 
+    top: 150px; 
+    left: 1200px; 
+    fill: var(--accent);
+    }
+    
+    .float {
+    animation-name: Floating;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    }
+    
+    @keyframes Floating{
+        from {transform:translate(0, 0px);}
+        65% {transform:translate(0, 50px);}
+        to {transform: translate(0, -0px);    }    
+    }
+    
+    .spin {
+    animation-name: Spinning;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    }
+    
+    @keyframes Spinning{
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    } 
+    }
