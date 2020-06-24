@@ -53,6 +53,9 @@ img{
     display:block;
     max-width:100%;
 }
+.container{
+    padding: 20px 10vw;
+}
 
 /* Typography */
 
@@ -83,11 +86,9 @@ h3{ font-size: var(--fs-h3)}
 }
 
 /* Header */
-
 nav{display: none;}
 
 /* About Me Section */
-
 .about-me{
     max-width: 1000px;
     margin: 0 auto;
@@ -133,10 +134,39 @@ nav{display: none;}
     }
 }
 
-
-.container{
-    padding: 20px 10vw;
+/* Projects Section */
+//Fallback layout
+.projects{
+    max-width: 500px;
+    margin: 0 auto;
 }
+.projects > article{
+    margin: 1rem;
+}
+@supports (display: grid) {
+    .projects{
+        max-width: 10000px;
+        margin: 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        //repeat as many column as possinle in the page with a minimum of 300px and a max of the same portion for all
+    }
+    .projects > article{
+        margin: 0; 
+    }
+}
+.project{
+    display: flex;
+    flex-flow: column;
+    border: 1px solid var(--dark);
+    padding: 2rem;
+}
+.project > a {
+    order: -1; //image displayed first
+    align-self: center;
+}
+
+
 header{
     background: linear-gradient(45deg, var(--dark), var(--medium));
     background-size: 200% 200%;
