@@ -7,25 +7,39 @@
 /* Custom Properties */
 :root {
     //main colours
-    --dark: #1D3557;
-    --medium: #457B9D;
-    --light: #A8DADC;
-    --white: #F4F1DE ;
-    --accent: #e47819;
+    // --dark: #1D3557;
+    // --medium: #457B9D;
+    // --light: #A8DADC;
+    // --white: #F4F1DE ;
+    // --accent: #e47819;
+    --dark: #320b3d;
+    --medium: #591d69;
+    --light: #c866cc;
+    --white: #fbecf0 ;
+    --accent: #ff8124;
 
     --fw-reg: 300;
-    --fw-bold: 900;
-
-    --ff-heading: 'Pattaya', sans-serif;
+    --fw-bold: 700;
     --ff-body: 'Montserrat', sans-serif;
+    --ff-code: 'Source Code Pro', monospace;
 
     --fs-h1: 3rem;
-    --fs-h2: 2.25rem;
-    --fs-h3: 1.25rem;
+    --fs-h2: 2.2rem;
+    --fs-h3: 1.5rem;
     --fs-body: 1rem;
-}
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Pattaya&display=swap');
 
+    /* box-shadow */
+    --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25), 
+        0.125em 0.125em 0.25em rgba(0,0,0,.15);
+}
+@media (min-width: 800px){
+    :root{    
+    //font-size
+        --fs-h1: 4rem;
+        --fs-body: 1.15rem;
+    }
+}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&family=Source+Code+Pro:wght@300&display=swap');
 /* General Styles */
 
 body{
@@ -45,31 +59,88 @@ img{
 h1, 
 h2, 
 h3{
-    font-family: var(--ff-heading);
+    font-weight: var(--fw-bold);
     line-height: 1.1;
     margin:0;
+    padding:0.5em 0;
 }
-h1{ font-size: var(--fs-h1)}
+h1{ font-size: var(--fs-h1);
+    color: var(--light);
+}
 h2{ font-size: var(--fs-h2)}
 h3{ font-size: var(--fs-h3)}
 
 .section__title{
+    font-size: var(--fs-h2);
     margin-bottom: .25em;
+    color: var(--light);
 }
 .section__subtitle{
     margin:0;
     font-size: var(--fs-h3);
+    color: var(--accent);
+    font-family: var(--ff-code);
 }
 
-/* Intro Section */
+/* Header */
 
+nav{display: none;}
+
+/* About Me Section */
+
+.about-me{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.about-me__img{
+    box-shadow: var(--bs);
+}
+.section__subtitle--about{
+    background-color: var(--medium);
+    padding: 0.5rem;
+}
+@media (min-width: 600px){
+    .about-me {
+        display: grid;
+        grid-template-columns: 1fr 200px;
+        grid-template-areas:
+        "title img"
+        "subtitle img"
+        "text img";
+        grid-column-gap: 2em;
+    }
+    .section__title--about{
+        grid-area: title;
+    }
+    .section__subtitle--about{
+        grid-area: subtitle;
+        grid-column: 1 / -1; //from the beginning to the last column of the grid
+        grid-row: 2;
+        //set up the ubtitle to go behind the image and strech all over the page
+        position: relative;
+        left: -1em;
+        width: calc(100% + 2em);
+        padding-left: 1em;
+        padding-right: calc(200px + 4em);
+    }
+    .about-me__img{
+        grid-area: img;
+        position: relative;
+        z-index:2;
+    }
+    .about-me__body{
+        grid-area: text;
+    }
+}
 
 
 .container{
     padding: 20px 10vw;
 }
 header{
-    background: var(--dark);
+    background: linear-gradient(45deg, var(--dark), var(--medium));
+    background-size: 200% 200%;
+    animation: gradient 10s ease infinite;
     color: var(--light);
 }
 .nav{
@@ -102,12 +173,5 @@ footer{
         }
     }
 
-@media (min-width: 800px){
-    :root{    
-    //font-size
-        --fs-h1: 4rem;
 
-        --fs-body: 1.25rem;
-    }
-}
 
