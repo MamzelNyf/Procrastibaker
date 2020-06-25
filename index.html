@@ -8,13 +8,13 @@
         <meta name="description" content="Procrastibaker | Baking & Coding">
         <meta name="author" content ="Fanny Lefert">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" /> 
+        <script src="https://use.fontawesome.com/352035ceeb.js"></script>
         <link rel="stylesheet" href="css/styles.css">
         <link rel="stylesheet" href="css/svg-anim.css">
 
     </head>
     <body>
-        <header class="container">
+        <header class="header">
             <!-- <div class="shapes float">
                 <svg class="triangle spin" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30px" height="30px" viewBox="0 0 30 30" enable-background="new 0 0 30 30" xml:space="preserve" style="transform: matrix3d(0.17364, 0.98481, 0, 0, -0.98481, 0.17364, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);">
                     <polygon fill="none" stroke-width="2px" stroke="#004e44" stroke-linejoin="round" stroke-miterlimit="10" points="14.921,2.27 28.667,25.5 1.175,25.5 "></polygon>
@@ -22,9 +22,7 @@
             </div> -->
 
             <!-- Header content -->
-            <div class="logo">
-                <img src="https://dummyimage.com/100x100/fff/aaa&text=Logo" alt="Logo">
-            </div>
+
             <!-- Navigation -->
             <button class="nav-toggle" aria-label="toggle-navigation">
                 <span class="hamburger"></span>
@@ -36,16 +34,28 @@
                     <li class="nav__item"><a href="contact.html" class="nav__link">Contact</a></li>
                 </ul>
             </nav>
-            <h1>Procrastibaking</h1>
-            <p class="section__subtitle">The practice of baking something completely unnecessary, with the intention of avoiding “real” work </p>
-            <img src="https://dummyimage.com/500x500/fff/aaa&text=Overlapping" alt="">
+            <!-- <div class="logo">
+                <img src="https://dummyimage.com/100x100/fff/aaa&text=Logo" alt="Logo">
+            </div> -->
+            <div class="intro">
+                <div class="intro__text">
+                    <h1>Procrastibaking</h1>
+                    <p class="section__subtitle">The practice of baking something completely unnecessary, with the intention of avoiding “real” work </p>
+                </div>
+                <div class="intro__img" >
+                    <img src="https://dummyimage.com/500x400/fff/aaa&text=SittingOnBorder" alt="">
+                </div>
+                
+            </div>
         </header>
 
         <!-- Main -->
         <main>
             <!-- About Me -->
-            <section class="about-me container">
+            <section class="about-me">
                 <h2 class="section__title section__title--about">Hi, I'm Fanny</h2>
+                <img class="about-me__img" src="https://dummyimage.com/500x500/fff/aaa&text=Profile" alt="">
+
                 <p class="section__subtitle section__subtitle--about">Visual Code Baker</p>
                 <div class="about-me__body">
                     <p> Positive, hard-working and an insatiable learner, I like to define myself as a Web Designer.<br>
@@ -61,44 +71,39 @@
                         Let me share with you an enjoyable way to escape from the computer and satisfy a craving for crunch: <strong>Procratisbaking</strong>!<br>
                     </p>
                 </div>
-                <img class="about-me__img" src="https://dummyimage.com/500x500/fff/aaa&text=Profile" alt="">
 
             </section>
             <!-- Projects Gallery-->
-            <section class="projects__gallery container" id="projects">
+            <section class="projects__gallery" id="projects">
                 <h2 class="section__title">While I'm not Baking, I'm Coding</h2>
                 <p>Text</p>
                 <div class="projects">
                     <article class="project">
+                    <!-- for accessibility reason, title first in html but img first with css -->
                         <h3>Title</h3>
-                        <p>Text</p>
                         <a href="#" class="project__item">
-                            <img src="https://dummyimage.com/200x200/fff/aaa&text=Project1" alt="" class="project__img">
+                            <img src="https://dummyimage.com/300x300/fff/aaa&text=Project1" alt="" class="project__img">
                         </a>
                         <button>See this project</button>
                     </article>
                     <article class="project">
                         <h3>Title</h3>
-                        <p>Text</p>
                         <a href="#" class="project__item">
-                            <img src="https://dummyimage.com/200x200/fff/aaa&text=Project2" alt="" class="project__img">
+                            <img src="https://dummyimage.com/300x300/fff/aaa&text=Project2" alt="" class="project__img">
                         </a>
                         <button>See this project</button>
                     </article>
                     <article class="project">
                         <h3>Title</h3>
-                        <p>Text</p>
                         <a href="#" class="project__item">
-                            <img src="https://dummyimage.com/200x200/fff/aaa&text=Project3" alt="" class="project__img">
+                            <img src="https://dummyimage.com/300x300/fff/aaa&text=Project3" alt="" class="project__img">
                         </a>
                         <button>See this project</button>
                     </article>
                     <article class="project">
-                        <!-- for accessibility reason, title first in html but img first with css -->
                         <h3>Title</h3>
-                        <p>Text</p>
                         <a href="#" class="project__item">
-                            <img src="https://dummyimage.com/200x200/fff/aaa&text=Project4" alt="" class="project__img">
+                            <img src="https://dummyimage.com/300x300/fff/aaa&text=Project4" alt="" class="project__img">
                         </a>
                         <button>See this project</button>
                     </article>
@@ -107,12 +112,24 @@
         </main>
 
         <!-- Footer -->
-        <footer class="container">
-            <p> Created by Fanny | </p><a href="mailto:fanny@shedesign.dev" class="footer__link">Say Hello</a>
+        <footer class="footer">
+            <a href="mailto:fanny@shedesign.dev?subject=Hello Visual Baker!" class="footer__link">Say Hello</a>
             <ul class="social-list">
-                <li class="social-list__link"><a href="https://github.con" class="social-list__link">a</a></li>
-                <li class="social-list__link"><a href="https://twitter.com" class="social-list__link">b</a></li>
-                <li class="social-list__link"><a href="https://copeden.io" class="social-list__link">c</a></li>
+                <li class="social-list__link">
+                    <a href="https://github.con" class="social-list__item">
+                        <i class="fa fa-github-alt" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li class="social-list__link">
+                    <a href="https://twitter.com" class="social-list__item">
+                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li class="social-list__link">
+                    <a href="https://copeden.io" class="social-list__item">
+                        <i class="fa fa-codepen" aria-hidden="true"></i>
+                    </a>
+                </li>
             </ul>
         </footer>
     </body>
