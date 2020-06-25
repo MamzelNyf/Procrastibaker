@@ -41,7 +41,7 @@
   --fs-h1: 2.3rem;
   --fs-h2: 2rem;
   --fs-h3: 1.3rem;
-  --fs-body: 1rem;
+  --fs-body: 1.05rem;
   /* box-shadow */
   --bs: 0.25em 0.25em 0.75em rgba(61,64,91,.25), 
         0.125em 0.125em 0.25em rgba(61,64,91,.15);
@@ -204,11 +204,10 @@ nav {
 }
 
 .about-me__img {
-  -webkit-box-shadow: var(--bs);
-          box-shadow: var(--bs);
   background-color: white;
   border-top-left-radius: 3%;
   border-top-right-radius: 3%;
+  margin-top: 20px;
 }
 
 .section__title--about {
@@ -219,13 +218,12 @@ nav {
   background-color: var(--dark);
   padding: 0.5rem;
   text-align: center;
-  font-size: var(--fs-h2);
 }
 
 .about-me__column img {
   width: 150px;
   height: auto;
-  margin: 0 auto -20px;
+  margin: 0 auto;
   cursor: pointer;
   -webkit-animation: beat .5s infinite alternate;
           animation: beat .5s infinite alternate;
@@ -279,6 +277,7 @@ nav {
     padding-left: 1em;
     padding-left: calc(275px + 2.7em);
     text-align: left;
+    font-size: var(--fs-h2);
   }
   .about-me__img {
     -ms-grid-row: 1;
@@ -288,6 +287,8 @@ nav {
     position: relative;
     z-index: 2;
     border-radius: 50%;
+    -webkit-box-shadow: var(--bs);
+            box-shadow: var(--bs);
   }
   .about-me__text-intro {
     -ms-grid-row: 3;
