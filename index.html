@@ -8,73 +8,150 @@
         <meta name="description" content="Procrastibaker | Baking & Coding">
         <meta name="author" content ="Fanny Lefert">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+        <script src="https://use.fontawesome.com/352035ceeb.js"></script>
         <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/svg-anim.css">
+
     </head>
     <body>
-        <header class="container">
-            <div class="shapes float">
+        <header class="header">
+            <!-- <div class="shapes float">
                 <svg class="triangle spin" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30px" height="30px" viewBox="0 0 30 30" enable-background="new 0 0 30 30" xml:space="preserve" style="transform: matrix3d(0.17364, 0.98481, 0, 0, -0.98481, 0.17364, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);">
                     <polygon fill="none" stroke-width="2px" stroke="#004e44" stroke-linejoin="round" stroke-miterlimit="10" points="14.921,2.27 28.667,25.5 1.175,25.5 "></polygon>
                 </svg>
-            </div>
+            </div> -->
 
             <!-- Header content -->
-            <div class="logo">
-                <img src="https://dummyimage.com/100x100/fff/aaa&text=Logo" alt="Logo">
-            </div>
+
             <!-- Navigation -->
             <button class="nav-toggle" aria-label="toggle-navigation">
                 <span class="hamburger"></span>
             </button>
             <nav class="nav">
                 <ul class="nav__list">
+                    <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
                     <li class="nav__item"><a href="recipe.html" class="nav__link">Recipe</a></li>
                     <li class="nav__item"><a href="contact.html" class="nav__link">Contact</a></li>
                 </ul>
             </nav>
-            <h1>Procrastibaking</h1>
-            <p class="subtitle">The practice of baking something completely unnecessary, with the intention of avoiding “real” work </p>
-            <img src="https://dummyimage.com/500x500/fff/aaa&text=Overlapping" alt="">
+            <!-- <div class="logo">
+                <img src="https://dummyimage.com/100x100/fff/aaa&text=Logo" alt="Logo">
+            </div> -->
+            <div class="intro">
+                <div class="intro__text">
+                    <h1>Procrastibaking</h1>
+                    <p class="section__subtitle">The practice of baking something completely unnecessary, with the intention of avoiding “real” work </p>
+                </div>
+                <div class="intro__img" >
+                    <img src="https://dummyimage.com/500x400/fff/aaa&text=SittingOnBorder" alt="">
+                </div>
+                
+            </div>
         </header>
 
-        <!-- Main content -->
+        <!-- Main -->
         <main>
-            <!-- Introduction -->
-            <section class="intro container">
-                <h2 class="section__title">Hi, I'm Fanny</h2>
+            <!-- About Me -->
+            <section class="about-me">
+                <h2 class="section__title section__title--about">Hi, I'm Fanny</h2>
+                <img class="about-me__img" src="assets/baker.png" alt="Fanny Lefert">
 
-                <p> Positive, hard-working and an insatiable learner, I like to define myself as a Web Designer.
-                    But I'm not only a job title.<br>
-                    I'm a Foodie and I'm lucky enough to have a Chef at home who is cooking amazing dishes.<br>
-                    I love Nature, hiking in beautiful and preserved places provides me with such a positive feeling and powerful energy. Caring for our Environment is part of my everyday routine.<br>
-                    I love Colours, Layout, Photography, Painting, Digital manipulation... I think we all have gifts to make Life prettier.<br>
-                    I'm a Cat lover and I can't wait to have a permanent situation to be able to take care of one (or many). For now, I'm just melting each time I watch videos and photos of cats. <br>
-                    
-                    I have started She{Codes} Plus program in June 2020, to develop my knowledge in web development, meet passionate women with similar interests and build a tech network in Perth.<br>
-                    But most of it, it is another step in my new life in Australia and I'm excited to find a community I belong to.<br>
-                    
-                    I realised a few months ago that I was missing an important thing from France (besides my family): a Crunchy French style Baguette. I have started reading blogs, watching videos, following tutorials... Baking is actually like learning a new programming language! Step-by-step, by practising, it becomes easier and better.<br>
-                    
-                    Let me share with you an enjoyable way to escape from the computer and satisfy a craving for crunch: Procratisbaking!<br>
+                <p class="section__subtitle section__subtitle--about">Front-End Baker</p>
+                    <p class="about-me__text-intro"> Positive, hard-working and an insatiable learner, I like to define myself as a Web Designer.<br>
+                    <strong> But I'm not only a job title.</strong>
                     </p>
-                    <img src="https://dummyimage.com/500x500/fff/aaa&text=Profile" alt="">
-
+                <div class="about-me__body"> 
+                    <div class="about-me__columns">
+                        <div class="about-me__column">
+                            <p>
+                                I'm a Foodie and I'm lucky enough to have a Chef at home who is cooking amazing dishes.<br>
+                                I love Nature, hiking in beautiful and preserved places provides me with such a positive feeling and powerful energy.<br>
+                                I love Colours, Layout, Photography, Painting... <br> I think we all have gifts to make Life prettier.<br>
+                                I'm a Cat lover and I can't wait to have a permanent situation to be able to take care of one (or many).
+                            </p>
+                        </div>
+                        <div class="about-me__column">
+                            <img src="assets/SheCodes.png" class="bounce" alt="SheCodes Logo" onclick="changeColour()" width="50px" height="50px">
+                            <p>I have started <a href="https://shecodes.com.au/plus/" target="_blank" rel="noopener noreferrer">She{Codes} Plus</a> program in June 2020, to develop my knowledge in web development, meet passionate women with similar interests and build a tech network in Perth.<br>
+                                But most of it, it is another step in my new life in Australia and I'm excited to find a community I belong to.
+                            </p>
+                        </div>
+                        <div class="about-me__column">
+                            <p> I realised a few months ago that I was missing an important thing from France (besides my family): a Crunchy French style Baguette. I have started reading blogs, watching videos, following tutorials... Baking is like learning a new programming language! Step-by-step, by practising, it becomes easier and better.<br>
+                                Let me share with you an enjoyable way to escape from the computer and satisfy a craving for crunch: <strong>Procratisbaking</strong>!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <a class="btn about-me__btn" href="recipe.html"> I want the recipe!</a>
             </section>
-            <!-- Gallery-->
-            <section class="gallery container">
-                <h3 class="section__title">While I'm not Baking, I'm Coding</h3>
-                <p>Text</p>
-                <img src="https://dummyimage.com/200x200/fff/aaa&text=Project1" alt="">
-                <img src="https://dummyimage.com/200x200/fff/aaa&text=Project2" alt="">
-                <img src="https://dummyimage.com/200x200/fff/aaa&text=Project3" alt="">
-                <img src="https://dummyimage.com/200x200/fff/aaa&text=Project4" alt="">
-
+            <!-- Projects Gallery-->
+            <section class="projects__gallery" id="projects">
+                <h2 class="section__title section__title--projects">While I'm not Baking, <span>I'm Coding</spa></h2>
+                <p>Most of these projects will be created during my aventure with SheCodes</p>
+                <div class="projects">
+                    <article class="project">
+                    <!-- for accessibility reason, title first in html but img first with css -->
+                        <h3 class="project__title">Title</h3>
+                        <a href="#" class="project__item">
+                            <img src="https://dummyimage.com/300x300/fff/aaa&text=Project1" alt="" class="project__img">
+                        </a>
+                    </article>
+                    <article class="project">
+                        <h3 class="project__title">Title</h3>
+                        <a href="#" class="project__item">
+                            <img src="https://dummyimage.com/300x300/fff/aaa&text=Project2" alt="" class="project__img">
+                        </a>
+                    </article>
+                    <article class="project">
+                        <h3 class="project__title">Title</h3>
+                        <a href="#" class="project__item">
+                            <img src="https://dummyimage.com/300x300/fff/aaa&text=Project3" alt="" class="project__img">
+                        </a>
+                    </article>
+                    <article class="project">
+                        <h3 class="project__title">Title</h3>
+                        <a href="#" class="project__item">
+                            <img src="https://dummyimage.com/300x300/fff/aaa&text=Project4" alt="" class="project__img">
+                        </a>
+                    </article>
+                    <article class="project">
+                        <h3 class="project__title">Title</h3>
+                        <a href="#" class="project__item">
+                            <img src="https://dummyimage.com/300x300/fff/aaa&text=Project5" alt="" class="project__img">
+                        </a>
+                    </article>
+                    <article class="project">
+                        <h3 class="project__title">Title</h3>
+                        <a href="#" class="project__item">
+                            <img src="https://dummyimage.com/300x300/fff/aaa&text=Project6" alt="" class="project__img">
+                        </a>
+                    </article>
+                </div>
             </section>
         </main>
 
-        <!-- Footer content -->
-        <footer class="container">
-            <p> Created by Fanny</p>
+        <!-- Footer -->
+        <footer class="footer">
+            <a href="mailto:fanny@shedesign.dev?subject=Hello Visual Baker!" class="footer__link">Say Hello</a>
+            <ul class="social-list">
+                <li class="social-list__link">
+                    <a href="https://github.con" class="social-list__item">
+                        <i class="fa fa-github-alt" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li class="social-list__link">
+                    <a href="https://twitter.com" class="social-list__item">
+                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li class="social-list__link">
+                    <a href="https://copeden.io" class="social-list__item">
+                        <i class="fa fa-codepen" aria-hidden="true"></i>
+                    </a>
+                </li>
+            </ul>
         </footer>
+        <script src="js/scripts.js"></script>
     </body>
 </html>
