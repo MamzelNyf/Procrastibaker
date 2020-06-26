@@ -1,0 +1,54 @@
+/* Custom Properties */
+:root {
+    /* Main colours
+    --dark: #1D3557;
+    --medium: #457B9D;
+    --light: #A8DADC;
+    --white: #F4F1DE ;
+    --accent: #e47819; 
+
+    similar as SheCodes
+    --dark: #320b3d;
+    --medium: #591d69;
+    --light: #c866cc;
+    --white: #fbecf0 ;
+    --accent: #ff8124; 
+
+    Pastels
+    --dark: #288c7c;
+    --medium: #b3e5da;
+    --light: #ffbb66;
+    --white: #fff ;
+    --accent: #f85a3a; */
+
+    --dark: #3d405b;
+    --medium: #6b72af;
+    --light: #91caae;
+    --white: #fff ;
+    --accent: #e07a5f;
+
+    --fw-reg: 300;
+    --fw-bold: 700;
+    --ff-body: 'Montserrat', sans-serif;
+    --ff-code: 'Source Code Pro', monospace;
+
+    --fs-h1: 2.3rem;
+    --fs-h2: 2rem;
+    --fs-h3: 1.3rem;
+    --fs-body: 1.05rem;
+
+    /* box-shadow */
+    --bs: 0.25em 0.25em 0.75em rgba(61,64,91,.25), 
+        0.125em 0.125em 0.25em rgba(61,64,91,.15);
+
+    /* padding container */
+    --bloc: 5vh 10vw;
+}
+@media (min-width: 900px) {
+    :root {
+        --fs-h1: 3em;
+        --fs-h2: 2em;
+        --fs-h3: 1.2em;
+        --fs-body: 1.15rem;
+    }
+}

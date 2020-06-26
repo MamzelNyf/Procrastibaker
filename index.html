@@ -10,8 +10,6 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
         <script src="https://use.fontawesome.com/352035ceeb.js"></script>
         <link rel="stylesheet" href="css/styles.css">
-        <link rel="stylesheet" href="css/svg-anim.css">
-
     </head>
     <body>
         <header class="header">
@@ -22,28 +20,32 @@
             </div> -->
 
             <!-- Header content -->
+            <div class="logo-nav">
+                <div class="logo">
+                    <img src="assets/logo.svg" alt="Logo">
+                </div>
+                <!-- Navigation --> 
+                <button class="nav-toggle" aria-label="toggle-navigation">
+                    <span class="hamburger"></span>
+                </button>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#" class="nav__link">Bakery</a></li>
+                        <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
+                        <li class="nav__item"><a href="recipe.html" class="nav__link">Recipe</a></li>
+                        <li class="nav__item"><a href="contact.html" class="nav__link">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
 
-            <!-- Navigation -->
-            <button class="nav-toggle" aria-label="toggle-navigation">
-                <span class="hamburger"></span>
-            </button>
-            <nav class="nav">
-                <ul class="nav__list">
-                    <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
-                    <li class="nav__item"><a href="recipe.html" class="nav__link">Recipe</a></li>
-                    <li class="nav__item"><a href="contact.html" class="nav__link">Contact</a></li>
-                </ul>
-            </nav>
-            <!-- <div class="logo">
-                <img src="https://dummyimage.com/100x100/fff/aaa&text=Logo" alt="Logo">
-            </div> -->
+            <!--Intro-->
             <div class="intro">
                 <div class="intro__text">
                     <h1>Procrastibaking</h1>
                     <p class="section__subtitle">The practice of baking something completely unnecessary, with the intention of avoiding “real” work </p>
                 </div>
                 <div class="intro__img" >
-                    <img src="https://dummyimage.com/500x400/fff/aaa&text=AnimationSittingOnBorder" alt="">
+                    <img src="assets/bread-anim.gif" alt="Animation bread">
                 </div>
                 
             </div>
@@ -57,12 +59,13 @@
                 <img class="about-me__img" src="assets/baker.png" alt="Fanny Lefert">
 
                 <p class="section__subtitle section__subtitle--about">Front-End Baker</p>
-                    <p class="about-me__text-intro"> Positive, hard-working and an insatiable learner, I like to define myself as a Web Designer.<br>
+                    <p class="about-me__text-intro"> Positive, hard-working and an insatiable learner, I like to define myself as a Web Designer & Front-End Developer.<br>
                     <strong> But I'm not only a job title.</strong>
                     </p>
                 <div class="about-me__body"> 
                     <div class="about-me__columns">
                         <div class="about-me__column">
+                            <h3>I'm a Human</h3>
                             <p>
                                 I'm a Foodie and I'm lucky enough to have a Chef at home who is cooking amazing dishes.<br>
                                 I love Nature, hiking in beautiful and preserved places provides me with such a positive feeling and powerful energy.<br>
@@ -71,14 +74,16 @@
                             </p>
                         </div>
                         <div class="about-me__column">
+                            <h3>Who codes?</h3>
                             <img src="assets/SheCodes.png" class="bounce" alt="SheCodes Logo" onclick="changeColour()" width="50px" height="50px">
-                            <p>I have started <a href="https://shecodes.com.au/plus/" target="_blank" rel="noopener noreferrer">She{Codes} Plus</a> program in June 2020, to develop my knowledge in web development, meet passionate women with similar interests and build a tech network in Perth.<br>
+                            <p>I have started <a href="https://shecodes.com.au/plus/" target="_blank" rel="noopener noreferrer">She{Codes} Plus</a> program in June 2020, to develop my knowledge in coding, meet passionate women with similar interests and build a tech network in Perth.
                                 But most of it, it is another step in my new life in Australia and I'm excited to find a community I belong to.
                             </p>
                         </div>
                         <div class="about-me__column">
-                            <p> I realised a few months ago that I was missing an important thing from France (besides my family): a Crunchy French style Baguette. I have started reading blogs, watching videos, following tutorials... Baking is like learning a new programming language! Step-by-step, by practising, it becomes easier and better.<br>
-                                Let me share with you an enjoyable way to escape from the computer and satisfy a craving for crunch: <strong>Procratisbaking</strong>!
+                            <h3>Baking at Home</h3>
+                            <p> I realised a few months ago that I was missing an important thing from France (besides my family): a Crunchy French style Baguette. <br>I have started reading blogs, watching videos, following tutorials... Baking is like learning a new programming language! Step-by-step, by practising, it becomes easier and better.<br>
+                                Let me share with you an enjoyable way to escape from the computer and satisfy a craving for crunch: <strong>Procratisbaking</strong>.
                             </p>
                         </div>
                     </div>
@@ -94,37 +99,37 @@
                     <!-- for accessibility reason, title first in html but img first with css -->
                         <h3 class="project__title">Title</h3>
                         <a href="#" class="project__item">
-                            <img src="https://dummyimage.com/300x300/fff/aaa&text=Project1" alt="" class="project__img">
+                            <img src="https://picsum.photos/id/119/300/300" alt="" class="project__img">
                         </a>
                     </article>
                     <article class="project">
                         <h3 class="project__title">Title</h3>
                         <a href="#" class="project__item">
-                            <img src="https://dummyimage.com/300x300/fff/aaa&text=Project2" alt="" class="project__img">
+                            <img src="https://picsum.photos/id/8/300/300" alt="" class="project__img">
                         </a>
                     </article>
                     <article class="project">
                         <h3 class="project__title">Title</h3>
                         <a href="#" class="project__item">
-                            <img src="https://dummyimage.com/300x300/fff/aaa&text=Project3" alt="" class="project__img">
+                            <img src="https://picsum.photos/id/250/300/300" alt="" class="project__img">
                         </a>
                     </article>
                     <article class="project">
                         <h3 class="project__title">Title</h3>
                         <a href="#" class="project__item">
-                            <img src="https://dummyimage.com/300x300/fff/aaa&text=Project4" alt="" class="project__img">
+                            <img src="https://picsum.photos/id/180/300/300" alt="" class="project__img">
                         </a>
                     </article>
                     <article class="project">
                         <h3 class="project__title">Title</h3>
                         <a href="#" class="project__item">
-                            <img src="https://dummyimage.com/300x300/fff/aaa&text=Project5" alt="" class="project__img">
+                            <img src="https://picsum.photos/id/160/300/300" alt="" class="project__img">
                         </a>
                     </article>
                     <article class="project">
                         <h3 class="project__title">Title</h3>
                         <a href="#" class="project__item">
-                            <img src="https://dummyimage.com/300x300/fff/aaa&text=Project6" alt="" class="project__img">
+                            <img src="https://picsum.photos/id/20/300/300" alt="" class="project__img">
                         </a>
                     </article>
                 </div>

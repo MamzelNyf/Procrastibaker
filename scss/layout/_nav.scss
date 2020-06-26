@@ -1,0 +1,101 @@
+/* Navigation */
+
+.nav-logo{
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    align-items: center;
+}
+.logo{
+    max-width: 100px;
+}
+.nav{
+    position: fixed;
+    background: var(--dark);
+    color: var(--light);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    transform: translatex(100%);
+    /*create a full-screen nav with an ease-out transition */
+    transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
+}
+.nav__list{
+    list-style: none;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin:0;
+    padding:0;
+}
+.nav__link{
+    color: inherit;
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-h2);
+    text-decoration: none;
+}
+.nav__link:hover{
+    color: var(--medium);
+}
+.nav-toggle{
+    padding: .5em;
+    background: transparent;
+    border: 0;
+    cursor:pointer;
+    position:absolute;
+    top:1em;
+    right: 1em;
+    z-index:1000;
+}
+@media(min-width:600px){
+    .nav-toggle{
+        top:4vh;
+        right: 10vw;
+    }
+}
+/* .nav-open is added in js, allow the menu to appear, fix the hamburger to the top*/
+.nav-open {
+    .nav{
+        transform: translateX(0);
+        }
+    .nav-toggle{
+        position:fixed;
+    }
+    .hamburger{
+        transform: rotate(.625turn);
+    }
+    .hamburger::before{
+        transform: rotate(90deg) translate(-8px);
+    }
+    .hamburger::after{
+        opacity: 0;
+    }
+}
+
+
+.hamburger{
+    display: block;
+    position: relative;
+}
+.hamburger,
+.hamburger::before,
+.hamburger::after{
+    background: var(--light);
+    width: 2em;
+    height: 4px;
+    border-radius: 1em;
+    transition: transform 250ms ease-in-out;
+} 
+.hamburger::before,
+.hamburger::after {
+    content:'';
+    position: absolute;
+    left:0;
+    right:0;
+}
+.hamburger::before{top: 8px}
+.hamburger::after {bottom:8px}
