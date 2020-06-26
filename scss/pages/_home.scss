@@ -1,32 +1,4 @@
-/* Header */
-
-.header{
-    background-color: var(--dark);
-    color: var(--light);
-    padding: 3vh 10vw 0;
-}
-
-.intro__text{
-    padding: 2rem 0;
-}
-@media (min-width: 600px){
-    .intro{
-        display: flex;
-    }
-    .intro__text{
-        flex-grow: 1;
-        flex-shrink: 1;
-        max-width: 600px;
-    }
-    .intro__img{
-        align-self: flex-end;
-        justify-self: center;
-        flex-grow: 2;
-        & > img{
-            margin: auto;
-        }
-    }
-}
+/* Homepage */
 
 /* About Me Section */
 .about-me{

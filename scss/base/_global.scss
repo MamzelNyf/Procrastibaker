@@ -9,6 +9,9 @@
 
 /* General Styles */
 
+html{
+    scroll-behavior: smooth;
+}
 body{
     background-color:var(--white);
     font-family: var(--ff-body);
@@ -26,3 +29,4 @@ strong { font-weight: var(--fw-bold) }
     outline: 3px solid var(--medium);
     outline-offset: 3px;
 }
+

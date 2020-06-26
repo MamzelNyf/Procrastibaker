@@ -1,12 +1,12 @@
 /* 1. Configuration */
 @import
-  //redefine variables
     'base/variables',
     'base/global',
     'base/fonts';
 
 /* 2. Layout-related sections */
 @import
+    'layout/header',
     'layout/nav',
     'layout/footer';
 
