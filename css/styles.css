@@ -121,6 +121,18 @@ h3 {
   font-family: var(--ff-code);
 }
 
+a {
+  font-size: inherit;
+  font-weight: var(--fw-bold);
+  text-decoration: none;
+  color: var(--accent);
+}
+
+a:hover {
+  color: var(--light);
+  text-decoration: underline;
+}
+
 /* 2. Layout-related sections */
 /* Header */
 .header {
@@ -234,7 +246,7 @@ h3 {
   border: 0;
   cursor: pointer;
   position: absolute;
-  top: 2em;
+  top: 1.8em;
   right: 1.5em;
   z-index: 1000;
 }
@@ -609,7 +621,7 @@ h3 {
 }
 
 .intro-recipe {
-  height: calc(100vh - 158px);
+  min-height: calc(100vh - 158px);
 }
 
 .contact-form {

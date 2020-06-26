@@ -25,3 +25,13 @@ h3{ font-size: var(--fs-h3)}
     color: var(--accent);
     font-family: var(--ff-code);
 }
+a{
+    font-size: inherit;
+    font-weight: var(--fw-bold);
+    text-decoration: none;
+    color:var(--accent);
+}
+a:hover{
+    color:var(--light);
+    text-decoration: underline;
+}
