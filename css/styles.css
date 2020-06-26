@@ -118,14 +118,6 @@ h3 {
 }
 
 /* 2. Layout-related sections */
-nav {
-  display: none;
-}
-
-.nav {
-  float: right;
-}
-
 .nav li {
   list-style-type: none;
   display: inline-block;
@@ -195,6 +187,7 @@ nav {
   transition: -webkit-transform 200ms ease-in-out;
   transition: transform 200ms ease-in-out;
   transition: transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
+  border-radius: 5px;
 }
 
 .btn:hover {
@@ -329,6 +322,7 @@ nav {
     text-align: left;
     font-size: var(--fs-h3);
     padding-bottom: 0;
+    border-radius: 5px;
   }
   .about-me__img {
     -ms-grid-row: 1;
@@ -474,5 +468,37 @@ nav {
   .section__title--projects span {
     display: inline-block;
   }
+}
+
+.contact-form {
+  min-height: calc(100vh - 500px);
+  max-width: 420px;
+  margin: 3vh auto 7vh;
+}
+
+.feedback-input {
+  font-size: var(--fs--body);
+  color: var(--dark);
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border: 2px solid var(--accent);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: 0;
+}
+
+.feedback-input:focus {
+  border: 2px solid var(--medium);
+}
+
+.contact-form__btn {
+  width: 100%;
+  border: 0;
 }
 /*# sourceMappingURL=styles.css.map */
