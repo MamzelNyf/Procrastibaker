@@ -1,0 +1,28 @@
+
+/* Reset */
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+
+/* General Styles */
+
+body{
+    background-color:var(--white);
+    font-family: var(--ff-body);
+    color: var(--dark);
+    font-size: var(--fs-body);
+    line-height: 1.6;
+}
+img{
+    display:block;
+    max-width:100%;
+}
+strong { font-weight: var(--fw-bold) }
+
+:focus {
+    outline: 3px solid var(--medium);
+    outline-offset: 3px;
+}

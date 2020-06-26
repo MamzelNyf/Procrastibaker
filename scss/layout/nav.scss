@@ -1,0 +1,13 @@
+nav{display: none;}
+
+.nav{
+    float:right;
+    li{
+        list-style-type: none;    
+        display: inline-block;
+        padding: 15px;
+        a{
+            color: var(--light);
+        }
+    }
+}

@@ -1,0 +1,201 @@
+/* Header */
+
+.header{
+    background-color: var(--dark);
+    color: var(--light);
+    padding: 3vh 10vw 0;
+}
+
+.intro__text{
+    padding: 2rem 0;
+}
+@media (min-width: 600px){
+    .intro{
+        display: flex;
+    }
+    .intro__text{
+        flex-grow: 1;
+        flex-shrink: 1;
+        max-width: 600px;
+    }
+    .intro__img{
+        align-self: flex-end;
+        justify-self: center;
+        flex-grow: 2;
+        & > img{
+            margin: auto;
+        }
+    }
+}
+
+/* About Me Section */
+.about-me{
+    max-width: 10000px;
+    margin: 0 auto;
+    padding: var(--bloc);
+}
+.about-me__img{
+    background-color: white;
+    border-top-left-radius: 3%;
+    border-top-right-radius: 3%;
+    margin-top: 20px;
+}
+.section__title--about{
+    text-align: center;
+}
+.section__subtitle--about{
+    background-color: var(--dark);
+    padding: 0.5rem;
+    text-align: center;
+}
+.about-me__column img{
+    width: 145px;
+    height:auto;
+    cursor: pointer;
+	animation: beat .5s infinite alternate;
+    transform-origin: center;
+    margin: 5px 0 -5px;
+}
+/* Heart beat animation */
+@keyframes beat{
+	to { transform: scale(1.05); }
+}
+.about-me__btn{
+    margin: 20px 0 0;
+}
+@media (min-width: 600px){
+    .about-me {
+        display: grid;
+        grid-template-columns: 300px 1fr ;
+        grid-template-areas:
+        "img title "
+        "img subtitle "
+        "img text-intro"
+        "text text"
+        "button button";
+        grid-column-gap: 2em;
+        padding-top: 2vh;
+    }
+    .section__title--about{
+        grid-area: title;
+        text-align: left;
+        padding: 75px 0 10px;
+    }
+    .section__subtitle--about{
+        grid-area: subtitle;
+        grid-column: 1 / -1; /* from the beginning to the last column of the grid */
+        grid-row: 2;
+        /* set up the subtitle to go behind the image and strech all over the page */
+        position: relative;
+        left: -1em;
+        width: calc(100% + 2em);
+        padding-right: 1em;
+        padding-left: calc(300px + 2.7em);
+        text-align: left;
+        font-size: var(--fs-h3);
+        padding-bottom: 0 ;
+
+    }
+    .about-me__img{
+        grid-area: img;
+        position: relative;
+        z-index:2;
+        border-radius: 50%;
+        box-shadow: var(--bs);
+    }
+    .about-me__text-intro{
+        grid-area: text-intro;
+    }
+    .about-me__body{
+        grid-area: text;
+        grid-column: 1 / -1; 
+    }
+    .about-me__btn{
+        grid-area: button;
+        margin: 40px auto 0;
+    }
+}
+@media (min-width: 1000px){
+    .about-me__columns{
+        display: flex;
+        max-width: 1600px;
+        margin: 40px auto 0;
+        width:100%;
+    }
+    .about-me__column {
+        flex: 1; /* with flex: 1 all the columns use the same space */
+    }
+    .about-me__column + .about-me__column {
+        margin-left: 2em;
+    }
+}
+
+/* Projects Section */
+.projects__gallery{
+    background-color: var(--light);
+    padding: var(--bloc);    
+    text-align: center;
+}
+.section__title--projects{
+    color: var(--dark);
+    & span{
+        display:block;
+    }
+}
+
+/* Fallback layout */
+.projects{
+    max-width: 500px;
+    margin: 0 auto;
+}
+.projects > article{
+    margin: 1rem;
+}
+@supports (display: grid) {
+    .projects{
+        max-width: 10000px;
+        margin: 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        /* repeat as many column as possible in the page with a minimum of 300px and a max of the same portion for all */
+    }
+    .projects > article{
+        margin: 0; 
+    }
+}
+.project{
+    display: flex;
+    flex-flow: column;
+    padding: 2rem;
+    text-align: center;;
+}
+.project__item{
+    background-color: var(--medium);
+    overflow: hidden;
+    order: -1; /* image displayed first */
+    align-self: center;
+    width:100%;
+}
+.project__img{
+    transition:
+    transform 750ms cubic-bezier(.5, 0, .5, 1),
+    opacity 250ms linear;
+    width:100%;
+}
+.project__item:focus{
+    position: relative;
+    z-index: 2;
+}
+.project__img:hover,
+.project__item:focus .project__img{
+    transform: scale(1.2);
+    opacity: .5;
+}
+@media (min-width: 600px){
+    .project__title{
+        display: none;
+    }
+    .section__title--projects span{
+            display:inline-block;
+        }
+    }
