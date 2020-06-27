@@ -8,8 +8,9 @@
         <meta name="description" content="Procrastibaker | Baking & Coding">
         <meta name="author" content ="Fanny Lefert">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-        <script src="https://use.fontawesome.com/352035ceeb.js"></script>
         <link rel="stylesheet" href="css/styles.css">
+        <meta name="theme-color" content="#91caae">
+        <link rel="icon" href="favicon.ico">
     </head>
     <body>
         <header class="header">
@@ -22,7 +23,7 @@
             <!-- Header content -->
             <div class="logo-nav">
                 <div class="logo">
-                    <img src="assets/logo.svg" alt="Logo">
+                    <a href="#" aria-label="Homepage"><img src="assets/logo.svg" alt="Logo"></a>
                 </div>
                 <!-- Navigation --> 
                 <button class="nav-toggle" aria-label="toggle-navigation">
@@ -75,7 +76,7 @@
                         </div>
                         <div class="about-me__column">
                             <h3>Who codes?</h3>
-                            <img src="assets/SheCodes.png" class="bounce" alt="SheCodes Logo" onclick="changeColour()" width="50px" height="50px">
+                            <a href="#" onclick="changeColour()" aria-label="SheCodes Colours"><img src="assets/SheCodes.png" class="bounce" alt="SheCodes Logo" width="50px" height="50px"></a>
                             <p>I have started <a href="https://shecodes.com.au/plus/" target="_blank" rel="noopener noreferrer">She{Codes} Plus</a> program in June 2020, to develop my knowledge in coding, meet passionate women with similar interests and build a tech network in Perth.
                                 But most of it, it is another step in my new life in Australia and I'm excited to find a community I belong to.
                             </p>
@@ -98,37 +99,37 @@
                     <article class="project">
                     <!-- for accessibility reason, title first in html but img first with css -->
                         <h3 class="project__title">Title</h3>
-                        <a href="#" class="project__item">
+                        <a href="#" class="project__item" aria-label="Project 1">
                             <img src="https://picsum.photos/id/119/300/300" alt="" class="project__img">
                         </a>
                     </article>
                     <article class="project">
                         <h3 class="project__title">Title</h3>
-                        <a href="#" class="project__item">
+                        <a href="#" class="project__item" aria-label="Project 2">
                             <img src="https://picsum.photos/id/8/300/300" alt="" class="project__img">
                         </a>
                     </article>
                     <article class="project">
                         <h3 class="project__title">Title</h3>
-                        <a href="#" class="project__item">
+                        <a href="#" class="project__item" aria-label="Project 3">
                             <img src="https://picsum.photos/id/250/300/300" alt="" class="project__img">
                         </a>
                     </article>
                     <article class="project">
                         <h3 class="project__title">Title</h3>
-                        <a href="#" class="project__item">
+                        <a href="#" class="project__item" aria-label="Project 4">
                             <img src="https://picsum.photos/id/180/300/300" alt="" class="project__img">
                         </a>
                     </article>
                     <article class="project">
                         <h3 class="project__title">Title</h3>
-                        <a href="#" class="project__item">
+                        <a href="#" class="project__item" aria-label="Project 5">
                             <img src="https://picsum.photos/id/160/300/300" alt="" class="project__img">
                         </a>
                     </article>
                     <article class="project">
                         <h3 class="project__title">Title</h3>
-                        <a href="#" class="project__item">
+                        <a href="#" class="project__item" aria-label="Project 6">
                             <img src="https://picsum.photos/id/20/300/300" alt="" class="project__img">
                         </a>
                     </article>
@@ -141,23 +142,28 @@
             <a href="mailto:fanny@shedesign.dev?subject=Hello Visual Baker!" class="footer__link">Say Hello</a>
             <ul class="social-list">
                 <li class="social-list__link">
-                    <a href="https://github.com/MamzelNyf" target="_blank" rel="noopener noreferrer" class="social-list__item">
-                        <i class="fa fa-github" aria-hidden="true"></i>
+                    <a href="https://shedesign.dev" target="_blank" rel="noopener noreferrer" class="social-list__item" aria-label="SheDesign Portfolio">
+                        <i class="icon-she" aria-hidden="true"></i>
                     </a>
                 </li>
                 <li class="social-list__link">
-                    <a href="https://www.linkedin.com/in/fanny-lefert/" target="_blank" rel="noopener noreferrer" class="social-list__item">
-                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                    <a href="https://github.com/MamzelNyf" target="_blank" rel="noopener noreferrer" class="social-list__item" aria-label="GitHub">
+                        <i class="icon-github" aria-hidden="true"></i>
                     </a>
                 </li>
                 <li class="social-list__link">
-                    <a href="https://twitter.com/MamzelNyf" target="_blank" rel="noopener noreferrer" class="social-list__item">
-                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                    <a href="https://www.linkedin.com/in/fanny-lefert/" target="_blank" rel="noopener noreferrer" class="social-list__item" aria-label="Linkedin">
+                        <i class="icon-linkedin2" aria-hidden="true"></i>
                     </a>
                 </li>
                 <li class="social-list__link">
-                    <a href="https://codepen.io/MamzelNyf" target="_blank" rel="noopener noreferrer" class="social-list__item">
-                        <i class="fa fa-codepen" aria-hidden="true"></i>
+                    <a href="https://twitter.com/MamzelNyf" target="_blank" rel="noopener noreferrer" class="social-list__item" aria-label="Twitter">
+                        <i class="icon-twitter" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li class="social-list__link">
+                    <a href="https://codepen.io/MamzelNyf" target="_blank" rel="noopener noreferrer" class="social-list__item" aria-label="Codepen">
+                        <i class="icon-codepen" aria-hidden="true"></i>
                     </a>
                 </li>
             </ul>

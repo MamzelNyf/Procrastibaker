@@ -22,11 +22,11 @@
     --light: #ffbb66;
     --white: #fff ;
     --accent: #f85a3a; */
-  --dark: #3d405b;
+  --dark: #373A53;
   --medium: #6b72af;
   --light: #91caae;
   --white: #fff ;
-  --accent: #e07a5f;
+  --accent: #EC8C83;
   --fw-reg: 300;
   --fw-bold: 700;
   --ff-body: 'Montserrat', sans-serif;
@@ -86,6 +86,50 @@ strong {
   outline-offset: 3px;
 }
 
+/* Fonts */
+/* Icons */
+@font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon.eot");
+  src: url("../fonts/icomoon.eot#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf") format("truetype"), url("../fonts/icomoon.woff") format("woff"), url("../fonts/icomoon.svg#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-she:before {
+  content: "\e900";
+}
+
+.icon-twitter:before {
+  content: "\ea96";
+}
+
+.icon-github:before {
+  content: "\eab0";
+}
+
+.icon-linkedin2:before {
+  content: "\eaca";
+}
+
+.icon-codepen:before {
+  content: "\eae8";
+}
+
 /* Typography */
 h1,
 h2,
@@ -111,7 +155,7 @@ h3 {
 
 .section__title {
   font-size: var(--fs-h2);
-  color: var(--light);
+  color: var(--medium);
 }
 
 .section__subtitle {
