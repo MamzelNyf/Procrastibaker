@@ -74,9 +74,9 @@ a{
     font-size: inherit;
     font-weight: var(--fw-bold);
     text-decoration: none;
-    color:var(--accent);
+    color:var(--medium);
 }
 a:hover{
-    color:var(--light);
+    color:var(--dark);
     text-decoration: underline;
 }
