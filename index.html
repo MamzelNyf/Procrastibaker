@@ -10,16 +10,54 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
         <link rel="stylesheet" href="css/styles.css">
         <meta name="theme-color" content="#91caae">
+        <meta name="authoring-tool" content="Adobe_Animate_CC">
         <link rel="icon" href="favicon.ico">
+        <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+        <script src="js/bread_HTML5 Canvas.js"></script>
+        <script>
+            var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
+            function init() {
+                canvas = document.getElementById("canvas");
+                anim_container = document.getElementById("animation_container");
+                dom_overlay_container = document.getElementById("dom_overlay_container");
+                var comp=AdobeAn.getComposition("984CB7EC5593430DA8B15CBE475B3047");
+                var lib=comp.getLibrary();
+                var loader = new createjs.LoadQueue(false);
+                loader.addEventListener("fileload", function(evt){handleFileLoad(evt,comp)});
+                loader.addEventListener("complete", function(evt){handleComplete(evt,comp)});
+                var lib=comp.getLibrary();
+                loader.loadManifest(lib.properties.manifest);
+            }
+            function handleFileLoad(evt, comp) {
+                var images=comp.getImages();	
+                if (evt && (evt.item.type == "image")) { images[evt.item.id] = evt.result; }	
+            }
+            function handleComplete(evt,comp) {
+                //This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
+                var lib=comp.getLibrary();
+                var ss=comp.getSpriteSheet();
+                var queue = evt.target;
+                var ssMetadata = lib.ssMetadata;
+                for(i=0; i<ssMetadata.length; i++) {
+                    ss[ssMetadata[i].name] = new createjs.SpriteSheet( {"images": [queue.getResult(ssMetadata[i].name)], "frames": ssMetadata[i].frames} )
+                }
+                exportRoot = new lib.bread_HTML5Canvas();
+                stage = new lib.Stage(canvas);	
+                //Registers the "tick" event listener.
+                fnStartAnimation = function() {
+                    stage.addChild(exportRoot);
+                    createjs.Ticker.framerate = lib.properties.fps;
+                    createjs.Ticker.addEventListener("tick", stage);
+                }	    
+                //Code to support hidpi screens and responsive scaling.
+                AdobeAn.makeResponsive(false,'both',false,1,[canvas,anim_container,dom_overlay_container]);	
+                AdobeAn.compositionLoaded(lib.properties.id);
+                fnStartAnimation();
+            }
+        </script>
     </head>
-    <body>
+    <body onload="init();" style="margin:0px;">
         <header class="header">
-            <!-- <div class="shapes float">
-                <svg class="triangle spin" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30px" height="30px" viewBox="0 0 30 30" enable-background="new 0 0 30 30" xml:space="preserve" style="transform: matrix3d(0.17364, 0.98481, 0, 0, -0.98481, 0.17364, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);">
-                    <polygon fill="none" stroke-width="2px" stroke="#004e44" stroke-linejoin="round" stroke-miterlimit="10" points="14.921,2.27 28.667,25.5 1.175,25.5 "></polygon>
-                </svg>
-            </div> -->
-
             <!-- Header content -->
             <div class="logo-nav">
                 <div class="logo">
@@ -45,9 +83,11 @@
                     <h1>Procrastibaking</h1>
                     <p class="section__subtitle">The practice of baking something completely unnecessary, with the intention of avoiding “real” work </p>
                 </div>
-                <div class="intro__img" >
-                    <img src="assets/bread-anim.gif" alt="Animation bread">
-                </div>
+                <div id="animation_container" style="background-color:rgba(255, 255, 255, 0); width:440px; height:260px">
+		<canvas id="canvas" width="440" height="260" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 0);"></canvas>
+		<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:440px; height:260px; position: absolute; left: 0px; top: 0px; display: block;">
+		</div>
+	</div>
                 
             </div>
         </header>
@@ -76,10 +116,15 @@
                         </div>
                         <div class="about-me__column">
                             <h3>Who codes?</h3>
-                            <a href="#" onclick="changeColour()" aria-label="SheCodes Colours"><img src="assets/SheCodes.png" class="bounce" alt="SheCodes Logo" width="50px" height="50px"></a>
-                            <p>I have started <a href="https://shecodes.com.au/plus/" target="_blank" rel="noopener noreferrer">She{Codes} Plus</a> program in June 2020, to develop my knowledge in coding, meet passionate women with similar interests and build a tech network in Perth.
-                                But most of it, it is another step in my new life in Australia and I'm excited to find a community I belong to.
-                            </p>
+                            <div class="shecodes_block">
+                                <div class="tooltip">
+                                    <img src="assets/SheCodes.png" onclick="changeColour()" aria-label="SheCodes Colours" class="bounce" alt="SheCodes Logo" width="50px" height="50px">   
+                                    <span class="tooltiptext">Click to see SheCodes Power!</span>
+                                </div>
+                                <p>I have started <a href="https://shecodes.com.au/plus/" target="_blank" rel="noopener noreferrer">She{Codes} Plus</a> program in June 2020, to develop my knowledge in coding, meet passionate women with similar interests and build a tech network in Perth.
+                                    But most of it, it is another step in my new life in Australia and I'm grateful to find a community I belong to.
+                                </p>
+                            </div>
                         </div>
                         <div class="about-me__column">
                             <h3>Baking at Home</h3>
@@ -94,43 +139,43 @@
             <!-- Projects Gallery-->
             <section class="projects__gallery" id="projects">
                 <h2 class="section__title section__title--projects">While I'm not Baking, <span>I'm Coding</spa></h2>
-                <p>Most of these projects will be created during my aventure with SheCodes</p>
+                <p>Find some projects I created during my aventure with SheCodes.</p>
                 <div class="projects">
                     <article class="project">
                     <!-- for accessibility reason, title first in html but img first with css -->
-                        <h3 class="project__title">Title</h3>
-                        <a href="#" class="project__item" aria-label="Project 1">
-                            <img src="https://picsum.photos/id/119/300/300" alt="" class="project__img">
+                        <h3 class="project__title">TechForme Group Project</h3>
+                        <a href="https://techforme.herokuapp.com/" target="_blank" rel="noreferrer noopener" class="project__item" aria-label="TechForme Group Project">
+                            <img src="assets/screen_techforme.jpg" alt="" class="project__img">
                         </a>
                     </article>
                     <article class="project">
-                        <h3 class="project__title">Title</h3>
-                        <a href="#" class="project__item" aria-label="Project 2">
-                            <img src="https://picsum.photos/id/8/300/300" alt="" class="project__img">
+                        <h3 class="project__title">Cauz Crowfunding platform</h3>
+                        <a href="https://shecodes-cauz-react.herokuapp.com/" target="_blank" rel="noreferrer noopener" class="project__item" aria-label="Cauz Crowfunding platform">
+                            <img src="assets/screen_cauz.jpg" alt="" class="project__img">
                         </a>
                     </article>
                     <article class="project">
-                        <h3 class="project__title">Title</h3>
-                        <a href="#" class="project__item" aria-label="Project 3">
-                            <img src="https://picsum.photos/id/250/300/300" alt="" class="project__img">
+                        <h3 class="project__title">SheCodes News blog</h3>
+                        <a href="https://shecodes-news-django.herokuapp.com/" target="_blank" rel="noreferrer noopener" class="project__item" aria-label="SheCodes News blog">
+                            <img src="assets/screen_shecodesnews.jpg" alt="" class="project__img">
                         </a>
                     </article>
                     <article class="project">
-                        <h3 class="project__title">Title</h3>
-                        <a href="#" class="project__item" aria-label="Project 4">
-                            <img src="https://picsum.photos/id/180/300/300" alt="" class="project__img">
+                        <h3 class="project__title">Procrastibaker Portfolio</h3>
+                        <a href="https://mamzelnyf.github.io/" target="_blank" rel="noreferrer noopener" class="project__item" aria-label="Procrastibaker Portfolio">
+                            <img src="assets/screen_procrastibaker.jpg" alt="" class="project__img">
                         </a>
                     </article>
                     <article class="project">
-                        <h3 class="project__title">Title</h3>
-                        <a href="#" class="project__item" aria-label="Project 5">
-                            <img src="https://picsum.photos/id/160/300/300" alt="" class="project__img">
+                        <h3 class="project__title">GitHub MamzelNyf</h3>
+                        <a href="https://github.com/MamzelNyf" target="_blank" rel="noreferrer noopener" class="project__item" aria-label="GitHub MamzelNyf">
+                            <img src="assets/screen_github.jpg" alt="" class="project__img">
                         </a>
                     </article>
                     <article class="project">
-                        <h3 class="project__title">Title</h3>
-                        <a href="#" class="project__item" aria-label="Project 6">
-                            <img src="https://picsum.photos/id/20/300/300" alt="" class="project__img">
+                        <h3 class="project__title">SheDesign.dev Portfolio</h3>
+                        <a href="https://shedesign.dev/" target="_blank" rel="noreferrer noopener" class="project__item" aria-label="SheDesign.dev Portfolio">
+                            <img src="assets/screen_shedesign.jpg" alt="" class="project__img">
                         </a>
                     </article>
                 </div>
